@@ -1,112 +1,93 @@
+<template>
+  <Swiper class="ads-swiper-container"
+  :modules="modules"
+  :space-between="10"
+  :loop="true"
+  :pagination="{clickable:true}"
+  :autoplay = "{
+    dalay: 60000000000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true
+  }"
+  >
+<swiper-slide v-for ="text in swiperTextBase" :key="text.description" class="ads-slide-container">
+<div class="ads-text-container">
+  <h1 class="ads-text-title">{{ text.author }}</h1>
+  <h1 class="ads-text-desc">{{ text.description }}</h1>
+</div>
+<img :src="text.img" alt="" class="ads-text-img">
+</swiper-slide>
+  </Swiper>
+</template>
+
 <script>
-    // import Swiper core and required modules
-    import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-  
-    // Import Swiper Vue.js components
-    import { Swiper, SwiperSlide } from 'swiper/vue';
-  
-    // Import Swiper styles
-    import 'swiper/css';
-    import 'swiper/css/navigation';
-    import 'swiper/css/pagination';
-    import 'swiper/css/scrollbar';
-  
-    // Import AdsImage
-    import AdsImage from "../assets/happy.png"
-    // Import Swiper styles
-    export default {
-      components: {
-        Swiper,
-        SwiperSlide,
-        happy : AdsImage
-      },
-      setup() {
-        const onSwiper = (swiper) => {
-          console.log(swiper);
-        };
-        const onSlideChange = () => {
-          console.log('slide change');
-        };
-        return {
-          onSwiper,
-          onSlideChange,
-          modules: [Navigation, Pagination, Scrollbar, A11y],
-        };
-      },
-    };
+import {Swiper, SwiperSlide} from "swiper/vue"
+import {Autoplay, Pagination} from "swiper"
+import "swiper/css"
+import "swiper/css/pagination"
+import { ref } from "vue"
+
+export default {
+  components: {
+      Swiper,
+      SwiperSlide,
+      Autoplay,
+      Pagination
+    },
+  setup() {
+    const swiperTextBase = ref([
+{
+  author: "Elon Musk",
+  description: "Le Lorem Ipsum est simplement du faux texte employé dans la composition ...",
+  img:"https://www.transparentpng.com/thumb/happy-person/VJdvLa-download-happy-blackman-png.png"
+},
+{
+  author: "Bill Gates",
+  description: "On sait depuis longtemps que travailler avec du texte lisible et ...",
+  img:"https://www.ceicom-solutions.fr/wp-content/uploads/2014/03/happy-people1.png"
+},
+{
+  author: "Jeff Bezos",
+  description: "Plusieurs variations de Lorem Ipsum peuvent être trouvées ici ou là ...",
+  img:"https://freepngimg.com/thumb/happy_person/4-2-happy-person-transparent.png"
+}
+
+]);
+return {modules: [Pagination, Autoplay], swiperTextBase}
+  }
+}
 </script>
 
-<template>
-    <swiper
-      :modules="modules"
-      :slides-per-view="3"
-      :space-between="50"
-      navigation
-      :pagination="{ clickable: true }"
-      :scrollbar="{ draggable: true }"
-      @swiper="onSwiper"
-      @slideChange="onSlideChange"
-    >
-      <swiper-slide>
-            <img class="sliderImage" :src="happy" alt="" />
-            <div class="pub-text">
-                <h1>Now Go forward with us</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero sunt pariatur 
-            repellat itaque repudiandae aut voluptates, excepturi assumenda.</p>
-            </div>
-       
-      </swiper-slide>
-     
-      <swiper-slide>
-            <img :src="happy" alt="" />
-            <div class="pub-text">
-                <h1>Now Go forward with us</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero sunt pariatur 
-            repellat itaque repudiandae aut voluptates, excepturi assumenda.</p>
-            </div>
-       
-      </swiper-slide>
-      <swiper-slide>
-            <img class="sliderImage" :src="happy" alt="" />
-            <div class="pub-text">
-                <h1>Now Go forward with us</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero sunt pariatur 
-            repellat itaque repudiandae aut voluptates, excepturi assumenda.</p>
-            </div>
-       
-      </swiper-slide>
-     
-      <swiper-slide>
-            <img :src="happy" alt="" />
-            <div class="pub-text">
-                <h1>Now Go forward with us</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero sunt pariatur 
-            repellat itaque repudiandae aut voluptates, excepturi assumenda.</p>
-            </div>
-       
-      </swiper-slide>
+<style scoped>
+.ads-swiper-container {
+    width: 1200px;
+    height: 350px;
+    position: relative;
+    left: -3.5%;
+    background-color: rgb(231, 248, 118);
+}
 
-    </swiper>
-  </template>
-  <style scoped>
-.sliderImage {
+.ads-text-img {
    width: 400px;
-   transform: translate(800px, 75%);
+   transform: translate(800px, -20%);
 }
 
-.pub-text {
-    width: 40%;
-    padding: 20px;
-   transform: translate(180px, -50%);
-   background-color: aliceblue;
+.ads-text-container {
+  padding: 20px;
+  width: 48%;
+  background-color: rgb(17, 18, 19);
+  transform: translate(200px, 50%);
+   
 }
 
-.pub-text p {
+.ads-text-desc {
    font-size: 23px;
+   color: aliceblue;
 }
-.pub-text h1 {
+.ads-text-title {
    font-size: 23px;
    font-weight: bold;
    text-align: center;
+   color: rgb(197, 225, 12);
 }
 </style>
