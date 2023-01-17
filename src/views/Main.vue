@@ -1,10 +1,10 @@
 <script>
 import SearchBar  from '../components/SearchBar.vue'
-import CourseCard  from '../components/CourseCard.vue'
+import CourseCards  from '../components/CourseCards.vue'
 export default {
   components: {
     SearchBar,
-    CourseCard
+    CourseCards
   }
 }
 </script>
@@ -12,8 +12,8 @@ export default {
 <template>
     <main>
         <SearchBar/>
-        <div>
-          <CourseCard/>
+        <div class = "cards">
+          <CourseCards/>
         </div>
     </main>
 
@@ -25,5 +25,9 @@ main{
     position: absolute;
     top: 480px;
     left: 14%;
+}
+
+.cards {
+  margin-top: 30px;
 }
 </style>
