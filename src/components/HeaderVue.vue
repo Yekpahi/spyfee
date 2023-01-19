@@ -1,11 +1,20 @@
 <script>
 import Logo from "../assets/logo.png"
-
+import Home from "../assets/home.png"
+import Signin from "../assets/signin.png"
+import Signup from "../assets/signup.png"
+import Gallery from "../assets/gallery.png"
+import Notification from "../assets/notification.png"
 
 export default {
     data: function () {
         return {
-            logo: Logo
+            logo: Logo,
+            home: Home,
+            signin:Signin,
+            signup : Signup,
+            gallery: Gallery,
+            notification : Notification
         }
     }
 }
@@ -14,57 +23,55 @@ export default {
 <template>
     <header>
         <div class="header-container">
-            <img :src="logo" alt="" />
+           
             <ul>
-                <li>Web Development | </li>
-                <li>C++ courses | </li>
-                <li>Python language | </li>
-                <li>VueJs</li>
-                <li>React framework | </li>
-                <li>Django</li>
-                <li>Computer Science | </li>
-                <li>Spider and communication | </li>
-                <li>JavaScript language | </li>
-                <li>C Program | </li>
-                <li>Devops | </li>
-                <li>Others program</li>
-
+                <li class="header-left"> <img :src="logo" alt="" class="logo"/></li>
+                <li class="header-left"><img :src="home" alt="" class="home"/></li>
+                <li class="header-right"><img :src="signin" alt="" class="signin"/></li>
+                <li class="header-right"><img :src="signup" alt="" class="signup"/></li>
+                <li class="header-right"><img :src="notification" alt="" class="notification"/></li>
+                <li class="header-right"><img :src="gallery" alt="" class="gallery"/></li>
             </ul>
         </div>
     </header>
 </template>
 
 <style scoped>
-header {
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
- 
-}
-header .header-container {
-    display: flex;
-    justify-content:center;
-    
-}
-header .header-container img {
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    border: 1px solid red;
-    margin: 10px;
-}
 
+header .header-container {
+position: relative;
+top: 20px;
+}
 header .header-container ul {
+    position: relative;
     list-style: none;
     display: flex;
-    justify-content: center;
-    margin: 20px;
-    padding: 15px;
-    border-bottom: 2px solid rgb(70, 64, 64);
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    justify-content:end;
+    align-items: center;
+
 }
 
-header .header-container ul li {
-    margin-right: 10px;
+
+
+header .header-container ul .header-left {
+    transform: translateX(-1050px);
 }
+header .header-container ul .header-left .logo {
+    width: 100px;
+
+}
+header .header-container ul .header-left .home {
+    width: 30px;
+  
+}
+
+header .header-container ul .header-right {
+    transform: translateX(-100px);
+}
+header .header-container ul .header-right img {
+    width: 30px;
+    margin: 30px;
+}
+
+
 </style>
