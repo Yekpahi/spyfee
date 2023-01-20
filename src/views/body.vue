@@ -2,12 +2,14 @@
 import HeaderVue from '../components/HeaderVue.vue'
 import Ads from '../components/AdsVue.vue'
 import Main from "./Main.vue"
+import RightSide  from './RightSide.vue'
 
 export default {
   components: {
     HeaderVue,
     Ads,
-    Main
+    Main,
+    RightSide
   }
 }
 </script>
@@ -16,6 +18,7 @@ export default {
     <div>
         <HeaderVue/>
         <Main/>
+        <RightSide/>
   <Ads/>
     </div>
 
