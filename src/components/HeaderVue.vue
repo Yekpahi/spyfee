@@ -5,6 +5,9 @@ import Signin from "../assets/signin.png"
 import Signup from "../assets/signup.png"
 import Gallery from "../assets/gallery.png"
 import Notification from "../assets/notification.png"
+import UserProfile from "../assets/userprofile.png"
+import AboutIcon from "../assets/about.png"
+import {RouterLink} from "vue-router"
 
 export default {
     data: function () {
@@ -14,7 +17,9 @@ export default {
             signin:Signin,
             signup : Signup,
             gallery: Gallery,
-            notification : Notification
+            notification : Notification,
+            userprofile : UserProfile,
+            abouticon : AboutIcon
         }
     }
 }
@@ -26,11 +31,13 @@ export default {
            
             <ul>
                 <li class="header-left"> <img :src="logo" alt="" class="logo"/></li>
-                <li class="header-left"><img :src="home" alt="" class="home"/></li>
+                <li class="header-left"><RouterLink to="/"><img :src="home" alt="" class="home"/></RouterLink></li>
                 <li class="header-right"><img :src="signin" alt="" class="signin"/></li>
                 <li class="header-right"><img :src="signup" alt="" class="signup"/></li>
                 <li class="header-right"><img :src="notification" alt="" class="notification"/></li>
                 <li class="header-right"><img :src="gallery" alt="" class="gallery"/></li>
+                <li class="header-right"><RouterLink to="user"><img :src="userprofile" alt="" class="userprofile"/></RouterLink></li>
+                <li class="header-right"><RouterLink to="about"><img :src="abouticon" alt="" class="userprofile"/></RouterLink></li>
             </ul>
         </div>
     </header>
@@ -54,7 +61,7 @@ header .header-container ul {
 
 
 header .header-container ul .header-left {
-    transform: translateX(-1050px);
+    transform: translateX(-1000px);
 }
 header .header-container ul .header-left .logo {
     width: 100px;

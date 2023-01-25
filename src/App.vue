@@ -1,15 +1,18 @@
 <script>
-import Body  from './views/Body.vue'
+import Home  from './views/Home.vue'
+import Header from './components/HeaderVue.vue'
+
+import { RouterView } from 'vue-router';
 
 export default {
   components: {
-    Body
+    Home,
+    Header
   }
 }
 </script>
 
-
-
 <template>
-  <Body/>
+  <Header/>
+  <RouterView/>
 </template>
