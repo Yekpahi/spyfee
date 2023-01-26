@@ -14,7 +14,7 @@ export default {
 <template>
     <div class="search">
         <input type="text" placeholder="Rechercher">
-        <img :src="search" alt="">
+       <router-link to="search"><img class="searchLoop" :src="search" alt=""></router-link> 
     </div>
 </template>
 
@@ -28,7 +28,7 @@ export default {
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 
 }
-.search img {
+.searchLoop{
     width: 20px;
     height: 20px;
    position: absolute;

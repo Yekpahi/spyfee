@@ -3,6 +3,7 @@ import Home from "../views/Home.vue"
 import About from "../views/About.vue"
 import NotFound from "@/views/NotFound.vue"
 import User from "@/views/User.vue"
+import SearchPage from "@/views/search/SearchPage.vue"
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -24,6 +25,12 @@ const router = createRouter({
                 header: 2
               }
         },
+        {
+          path:"/search",
+          name:"search",
+          component: SearchPage,
+    
+      },
         {
             path:"/user",
             name:"user",
