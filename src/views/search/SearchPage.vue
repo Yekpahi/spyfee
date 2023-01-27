@@ -1,6 +1,8 @@
 <script>
 import Header from '@/components/HeaderVue.vue'
 import SearchCard from '@/components/searchpage/SearchCard.vue'
+import FilterCard from '@/components/searchpage/FilterCard.vue'
+
 import Search from '@/assets/search.png'
 import Filter from '@/assets/filter.png'
 
@@ -8,11 +10,13 @@ export default {
     components: {
         Header,
         SearchCard,
+        FilterCard
     },
     data() {
         return {
             search: Search,
-            filter: Filter
+            filter: Filter,
+            isHidden: false
         }
     },
 }
@@ -21,7 +25,7 @@ export default {
 <template>
     <Header />
     <div class="search-main">
-        <div class="">
+        <div class="searchresultinfo">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. .</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, cupiditate!</p>
         </div>
@@ -34,11 +38,12 @@ export default {
             <div class="resultat">
                 <p class="resulttext">Nous avons trouvé 50 000 résultats </p>
                 <div class="filter">
-                    <img :src="filter" alt=""> 
+                    <img :src="filter" v-on:click="isHidden = !isHidden" alt=""> 
                     <p>Filtrer</p>
                 </div>
                
             </div>
+            <h1 v-if="isHidden"> <FilterCard/> </h1>
 
             <SearchCard />
         </div>
@@ -103,5 +108,14 @@ justify-content:space-between;
 .searchCard-cards-container .resultat .filter img {
     margin-right: 10px;
     width: 30px;
+}
+
+.search-main .searchresultinfo {
+    background-color: antiquewhite;
+    margin: 0 auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    width: 50%;
+    padding: 20px;
 }
 </style>

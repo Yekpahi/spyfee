@@ -5,7 +5,9 @@ import Home from "@/assets/home.png"
 import Dashboard from "@/assets/dashboard.png"
 import { RouterLink } from "vue-router"
 import Userinfo from "@/components/user/Userinfo.vue"
-import CourseCard from "@/components/user/CourseCard.vue"
+import StudentCourseCard from "@/components/user/StudentCourseCard.vue"
+import ProfCourseCard from "@/components/user/ProfCourseCard.vue"
+
 
 export default {
     data: function () {
@@ -20,7 +22,8 @@ export default {
     },
     components: {
         Userinfo,
-        CourseCard,
+        StudentCourseCard,
+        ProfCourseCard
     }
 }
 </script>
@@ -55,12 +58,16 @@ export default {
                     <h4>Vos formations</h4>
                     <div class="roles">
                         <button class="etudiant">Etudiant</button>
-                        <button class="prof">Professeur</button>
+                        <button  class="prof">Professeur</button>
+       
                     </div>
 
                     <div class="courses-cards-container">
-                        <CourseCard />
-                        
+                
+                    
+                            <StudentCourseCard/>
+                   
+                
                     </div>
 
 
@@ -179,14 +186,14 @@ main .main .right {
 
 }
 
-.formationsList .roles button {
+.roles button {
     list-style: none;
     margin-right: 30px;
     width: 10em;
     padding: 5px;
     border: none;
     border-radius: 10px;
-    cursor: pointer;
+    cursor:alias;
 
 }
 
