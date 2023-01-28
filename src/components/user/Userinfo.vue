@@ -26,10 +26,11 @@ export default {
 <style scoped>
 .usermain {
     width:1000px;
-    position: relative;
+    position: absolute;
     left: 250px;
     padding: 10px;
-    background-color: aqua;
+    background-color: black;
+  
     
 }
 .usermain .profile {

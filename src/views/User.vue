@@ -17,6 +17,7 @@ export default {
             search: Search,
             home: Home,
             dashboard: Dashboard,
+            layout: 'student'
 
         }
     },
@@ -57,16 +58,18 @@ export default {
                 <div class="formationsList">
                     <h4>Vos formations</h4>
                     <div class="roles">
-                        <button class="etudiant">Etudiant</button>
-                        <button  class="prof">Professeur</button>
+                        <button   @click="layout='student'" :class="layout == 'student' ? 'barActive' : 'defaulButtonClass'">Etudiant</button>
+                        <button   @click="layout='teacher'" :class="layout == 'teacher' ? 'barActive' : 'defaulButtonClass'">Professeur</button>
        
                     </div>
 
                     <div class="courses-cards-container">
-                
-                    
-                            <StudentCourseCard/>
-                   
+                            <div v-if="layout === 'student'">
+                                <StudentCourseCard/>
+                            </div>
+                           <div v-if="layout === 'teacher'">
+                            <ProfCourseCard/>
+                           </div>
                 
                     </div>
 
@@ -174,9 +177,13 @@ main .main .right {
     height: 30px;
     cursor: pointer;
 }
-
+.courses-cards-container {
+  
+  background-color: rgb(255, 255, 255);
+}
 .formationsList {
     margin-top: 20px;
+    
 }
 
 .formationsList .roles {
@@ -186,6 +193,15 @@ main .main .right {
 
 }
 
+.barActive {
+    background-color: red;
+    color: white;
+}
+
+.defaulButtonClass {
+    background-color: rgb(5, 134, 227);
+    color: white;
+}
 .roles button {
     list-style: none;
     margin-right: 30px;
@@ -193,23 +209,15 @@ main .main .right {
     padding: 5px;
     border: none;
     border-radius: 10px;
-    cursor:alias;
-
+    color: rgb(1, 1, 1);
+    cursor:pointer;
 }
 
-.formationsList .roles .etudiant {
-    background-color: red;
-    color: white;
 
-}
-
-.formationsList .roles .prof {
-    background-color: rgb(26, 66, 242);
-    color: white;
-
-}
 
 .formationsList h4 {
     margin-bottom: 0.5rem;
 }
+
+
 </style>

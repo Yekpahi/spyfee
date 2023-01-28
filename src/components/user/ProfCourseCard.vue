@@ -25,7 +25,7 @@ export default {
     <div class="course-card">
         <img :src="c1" alt="">
         <div class="course-info">
-            <h3>Prof cours information utile</h3>
+            <h3>Les Professeur sont la</h3>
             <h4>11.52k etudiants</h4>
             <h5>61%..</h5>
         </div>
@@ -34,7 +34,7 @@ export default {
     <div class="course-card">
         <img :src="c2" alt="">
         <div class="course-info">
-            <h3>Java contre-attaque</h3>
+            <h3>Les Professeur sont la</h3>
             <h4>11.52k etudiants</h4>
             <h5>61%..</h5>
         </div>
@@ -43,7 +43,7 @@ export default {
     <div class="course-card">
         <img :src="c3" alt="">
         <div class="course-info">
-            <h3>Prof cours information utile</h3>
+            <h3>Les Professeur sont la</h3>
             <h4>11.52k etudiants</h4>
             <h5>61%..</h5>
         </div>
@@ -52,7 +52,7 @@ export default {
     <div class="course-card">
         <img :src="c4" alt="">
         <div class="course-info">
-            <h3>Prof cours information utile</h3>
+            <h3>Les Professeur sont la</h3>
             <h4>11.52k etudiants</h4>
             <h5>61%..</h5>
         </div>
@@ -61,7 +61,7 @@ export default {
     <div class="course-card">
         <img :src="c5" alt="">
         <div class="course-info">
-            <h3>Prof cours information utile</h3>
+            <h3>Les Professeur sont la</h3>
             <h4>11.52k etudiants</h4>
             <h5>61%..</h5>
         </div>
@@ -70,7 +70,7 @@ export default {
     <div class="course-card">
         <img :src="c6" alt="">
         <div class="course-info">
-            <h3>Prof cours information utile</h3>
+            <h3>Les Professeur sont la</h3>
             <h4>11.52k etudiants</h4>
             <h5>61%..</h5>
         </div>

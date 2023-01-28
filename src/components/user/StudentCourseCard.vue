@@ -21,7 +21,7 @@ export default {
 </script>
 
 <template>
-      <hr style="margin-top:12px">
+    <hr style="margin-top:12px">
     <div class="course-card">
         <img :src="c1" alt="">
         <div class="course-info">
@@ -85,10 +85,14 @@ export default {
     margin-top: 20px;
 
 }
+
 .course-card img {
     margin-right: 25px;
     width: 8em;
+    border: 3px solid white;
+    border-radius: 5px;
 }
+
 .course-card .course-info {
     display: flex;
     flex-direction: column;
@@ -98,13 +102,14 @@ export default {
 .course-card .course-info h3 {
     font-weight: bold;
     text-align: left;
+    color: rgb(200, 124, 124);
 }
 
 .course-card .course-info h4 {
     position: relative;
     left: 0;
     padding: 0;
-    color: rgb(12, 11, 11);
+    color: rgb(0, 0, 0);
 
     text-align: left;
 }
@@ -113,7 +118,7 @@ export default {
     position: relative;
     left: 0;
     padding: 0;
-    color: rgb(206, 25, 25);
+    color: rgb(253, 0, 0);
     text-align: left;
 }
 </style>
