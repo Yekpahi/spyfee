@@ -20,34 +20,56 @@ export default {
             <li class="role">Etudiante</li>
         </ul>
        </div>
+       <div class="biographie">
+        <h2>Biographie</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime eos dolor esse amet expedita labore vel quisquam sed. Eligendi facilis laborum quibusdam at 
+            soluta doloribus, iste officia cum nam atque!</p>
+            <h2>Biographie</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime eos dolor esse amet expedita labore vel quisquam sed. Eligendi facilis laborum quibusdam at 
+            soluta doloribus, iste officia cum nam atque!</p>
+            <h2>Biographie</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime eos dolor esse amet expedita labore vel quisquam sed. Eligendi facilis laborum quibusdam at 
+            soluta doloribus, iste officia cum nam atque!</p>  
+            <h2>Biographie</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime eos dolor esse amet expedita labore vel quisquam sed. Eligendi facilis laborum quibusdam at 
+            soluta doloribus, iste officia cum nam atque!</p>  
+       </div>
     </div>
 </template>
 
 <style scoped>
 .usermain {
-    width:1000px;
-    position: absolute;
-    left: 250px;
-    padding: 10px;
-    background-color: black;
-  
-    
-}
-.usermain .profile {
+    width:45vw;
     position: relative;
+    left: 250px;
 }
-
 .usermain .profile .cover {
     width: 100%;
-    height:400px;
+    height:40vh;
 }
 
 .usermain .profile .myprofile {
 position: absolute;
 left: 0;
-bottom: 0;
-width: 150px;
-height: 150px;
+bottom: -70px;
+width: 120px;
+height: 120px;
 border-radius: 50%;
+box-shadow: rgba(4, 137, 252, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+border: 4px solid rgb(228, 215, 215);
+}
+.name-role {
+    margin: 0;
+list-style: none;
+display: flex;
+flex-direction: column;
+justify-content: center;
+position: absolute;
+left:100px;
+bottom: -50px;
+}
+
+.usermain .biographie {
+    margin-top: 70px;
 }
 </style>

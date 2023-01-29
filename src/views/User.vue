@@ -89,12 +89,9 @@ export default {
 
 <style scoped>
 main .main {
-    height: 90vh;
-    width: 90vw;
+    height: 100vh;
+    width: 100vw;
     box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
-    text-align: center;
-    margin: 50px auto;
-    border-radius: 3em;
 }
 
 main .main .left {
@@ -104,9 +101,7 @@ main .main .left {
     bottom: 0;
     width: 10vw;
     height: 100%;
-    background-color: rgb(253, 227, 227);
-    border-radius: 3em 0em 0em 3em;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    background-color: rgb(24, 24, 24);
 }
 
 main .main .right {
@@ -116,9 +111,8 @@ main .main .right {
     bottom: 0;
     width: 20vw;
     height: 100%;
-    background-color: rgb(221, 222, 233);
-    border-radius: 0px 3em 3em 0px;
-    box-shadow: rgba(185, 185, 236, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    background-color: rgb(23, 23, 25);
+    
 }
 
 .right .barUp {
