@@ -33,19 +33,34 @@ export default {
             <h2>Biographie</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime eos dolor esse amet expedita labore vel quisquam sed. Eligendi facilis laborum quibusdam at 
             soluta doloribus, iste officia cum nam atque!</p>  
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime eos dolor esse amet expedita labore vel quisquam sed. Eligendi facilis laborum quibusdam at 
+            soluta doloribus, iste officia cum nam atque!</p>
+            <h2>Biographie</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime eos dolor esse amet expedita labore vel quisquam sed. Eligendi facilis laborum quibusdam at 
+            soluta doloribus, iste officia cum nam atque!</p>
+            <h2>Biographie</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime eos dolor esse amet expedita labore vel quisquam sed. Eligendi facilis laborum quibusdam at 
+            soluta doloribus, iste officia cum nam atque!</p>  
+            <h2>Biographie</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime eos dolor esse amet expedita labore vel quisquam sed. Eligendi facilis laborum quibusdam at 
+            soluta doloribus, iste officia cum nam atque!</p>     
        </div>
     </div>
 </template>
 
 <style scoped>
 .usermain {
-    width:45vw;
+    width:40vw;
     position: relative;
-    left: 250px;
+    left: 0;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 .usermain .profile .cover {
     width: 100%;
     height:40vh;
+    border-radius: 20px;
+    
 }
 
 .usermain .profile .myprofile {
@@ -71,5 +86,6 @@ bottom: -50px;
 
 .usermain .biographie {
     margin-top: 70px;
+    color: aliceblue;
 }
 </style>

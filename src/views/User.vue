@@ -7,6 +7,7 @@ import { RouterLink } from "vue-router"
 import Userinfo from "@/components/user/Userinfo.vue"
 import StudentCourseCard from "@/components/user/StudentCourseCard.vue"
 import ProfCourseCard from "@/components/user/ProfCourseCard.vue"
+import UserProfileNav from "@/components/user/UserProfileNav.vue"
 
 
 export default {
@@ -24,13 +25,15 @@ export default {
     components: {
         Userinfo,
         StudentCourseCard,
-        ProfCourseCard
+        ProfCourseCard,
+        UserProfileNav
     }
 }
 </script>
 
 <template>
     <main>
+       
         <div class="main">
             <aside class="left">
                 <div class="dashboardHome">
@@ -45,7 +48,11 @@ export default {
                     </div>
                 </div>
             </aside>
+            <div class="center-container">
+                <UserProfileNav />
+                <Userinfo />
 
+            </div>
             <aside class="right">
                 <div class="barUp">
                     <div class="search">
@@ -58,30 +65,28 @@ export default {
                 <div class="formationsList">
                     <h4>Vos formations</h4>
                     <div class="roles">
-                        <button   @click="layout='student'" :class="layout == 'student' ? 'barActive' : 'defaulButtonClass'">Etudiant</button>
-                        <button   @click="layout='teacher'" :class="layout == 'teacher' ? 'barActive' : 'defaulButtonClass'">Professeur</button>
-       
+                        <button @click="layout = 'student'"
+                            :class="layout == 'student' ? 'barActive' : 'defaulButtonClass'">Etudiant</button>
+                        <button @click="layout = 'teacher'"
+                            :class="layout == 'teacher' ? 'barActive' : 'defaulButtonClass'">Professeur</button>
+
                     </div>
 
                     <div class="courses-cards-container">
-                            <div v-if="layout === 'student'">
-                                <StudentCourseCard/>
-                            </div>
-                           <div v-if="layout === 'teacher'">
-                            <ProfCourseCard/>
-                           </div>
-                
+                        <div v-if="layout === 'student'">
+                            <StudentCourseCard />
+                        </div>
+                        <div v-if="layout === 'teacher'">
+                            <ProfCourseCard />
+                        </div>
+
                     </div>
 
 
                 </div>
             </aside>
 
-            <div class="center-container">
 
-                <Userinfo />
-
-            </div>
         </div>
     </main>
 
@@ -112,7 +117,14 @@ main .main .right {
     width: 20vw;
     height: 100%;
     background-color: rgb(23, 23, 25);
-    
+
+}
+
+.center-container {
+background-color: rgb(12, 12, 12);
+width: 66%;
+position: absolute;
+left: 12%;
 }
 
 .right .barUp {
@@ -171,13 +183,15 @@ main .main .right {
     height: 30px;
     cursor: pointer;
 }
+
 .courses-cards-container {
-  
-  background-color: rgb(255, 255, 255);
+
+    background-color: rgb(255, 255, 255);
 }
+
 .formationsList {
     margin-top: 20px;
-    
+
 }
 
 .formationsList .roles {
@@ -196,6 +210,7 @@ main .main .right {
     background-color: rgb(5, 134, 227);
     color: white;
 }
+
 .roles button {
     list-style: none;
     margin-right: 30px;
@@ -204,7 +219,7 @@ main .main .right {
     border: none;
     border-radius: 10px;
     color: rgb(1, 1, 1);
-    cursor:pointer;
+    cursor: pointer;
 }
 
 
@@ -212,6 +227,4 @@ main .main .right {
 .formationsList h4 {
     margin-bottom: 0.5rem;
 }
-
-
 </style>
