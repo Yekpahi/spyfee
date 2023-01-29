@@ -1,12 +1,12 @@
 <script>
-import Logo from "../assets/logo.png"
-import Home from "../assets/home.png"
-import Signin from "../assets/signin.png"
-import Signup from "../assets/signup.png"
-import Gallery from "../assets/gallery.png"
-import Notification from "../assets/notification.png"
-import UserProfile from "../assets/userprofile.png"
-import AboutIcon from "../assets/about.png"
+import Logo from "@/assets/logo.png"
+import Home from "@/assets/home.png"
+import Signin from "@/assets/signin.png"
+import Signup from "@/assets/signup.png"
+import Gallery from "@/assets/gallery.png"
+import Notification from "@/assets/notification.png"
+import UserProfile from "@/assets/userprofile.png"
+import AboutIcon from "@/assets/about.png"
 import {RouterLink} from "vue-router"
 
 export default {

@@ -1,5 +1,5 @@
 <script>
-import Home  from './views/Home.vue'
+import Home  from '@/views/home/Home.vue'
 
 
 import { RouterView } from 'vue-router';

@@ -1,5 +1,5 @@
 <script>
-import Header from '@/components/HeaderVue.vue'
+import Header from '@/components/header/HeaderVue.vue'
 import SearchCard from '@/components/searchpage/SearchCard.vue'
 import FilterCard from '@/components/searchpage/FilterCard.vue'
 

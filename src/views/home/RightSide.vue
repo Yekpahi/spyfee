@@ -8,7 +8,7 @@ export default {
 </script>
 
 <template>
-    <div class="container">
+    <div class="rightContainer">
         <div class="topcontainer">
             <p>Triez ici </p>
             <details>
@@ -107,9 +107,10 @@ export default {
 </template>
 
 <style scoped>
-.container {
+.rightContainer{
     position: absolute;
-    right: 0;
+    left:80%;
+    bottom: 180px;
     width: 18vw;
     margin-right: 3rem;
 
@@ -122,7 +123,7 @@ export default {
 }
 
 .bottomcontainer {
-    margin-top: 50px;
+    margin-top: 30px;
     background-color: rgb(182, 182, 212);
 }
 </style>

@@ -1,10 +1,10 @@
 <script>
-import Pic1 from "../assets/pic1.jpg"
-import Pic2 from "../assets/pic2.png"
-import Pic3 from "../assets/pic3.png"
-import Pic4 from "../assets/pic4.png"
-import Ppic from "../assets/profile.jpg"
-import Star from "../assets/star.png"
+import Pic1 from "@/assets/pic1.jpg"
+import Pic2 from "@/assets/pic2.png"
+import Pic3 from "@/assets/pic3.png"
+import Pic4 from "@/assets/pic4.png"
+import Ppic from "@/assets/profile.jpg"
+import Star from "@/assets/star.png"
 
 export default {
     data: function () {
@@ -164,6 +164,9 @@ export default {
 
 <style scoped>
 .cardsContainer {
+    position: absolurelate;
+    top: 360px;
+    width: 100%;
     display: flex;
     flex-direction: row;
 }
