@@ -27,19 +27,19 @@ export default {
 
 <template>
     <header>
-        <div class="header-container">
-           
+        <nav class="header-container">
             <ul>
                 <li class="header-left"> <img :src="logo" alt="" class="logo"/></li>
                 <li class="header-left"><RouterLink to="/"><img :src="home" alt="" class="home"/></RouterLink></li>
-                <li class="header-right"><img :src="signin" alt="" class="signin"/></li>
+                <li class="header-right"><fa icon="fa-solid fa-right-to-bracket" /></li>
                 <li class="header-right"><img :src="signup" alt="" class="signup"/></li>
                 <li class="header-right"><img :src="notification" alt="" class="notification"/></li>
                 <li class="header-right"><img :src="gallery" alt="" class="gallery"/></li>
                 <li class="header-right"><RouterLink to="user"><img :src="userprofile" alt="" class="userprofile"/></RouterLink></li>
-                <li class="header-right"><RouterLink to="about"><img :src="abouticon" alt="" class="userprofile"/></RouterLink></li>
+                <li class="header-right"><RouterLink to="about"></RouterLink></li>
+            
             </ul>
-        </div>
+        </nav>
     </header>
 </template>
 
