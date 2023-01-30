@@ -33,20 +33,45 @@ export default {
 
 <template>
     <main>
-       
+
         <div class="main">
             <aside class="left">
-                <div class="dashboardHome">
-                    <div class="dashboard">
-                        <img :src="dashboard" alt="">
-                    </div>
-                    <div class="home">
-                        <router-link to="home">
-                            <img :src="home" alt="">
-                        </router-link>
-
-                    </div>
+                <div class="headerleft">
+                    <font-awesome-icon icon="fa-solid fa-gear" />
+                    <p>Les outils</p>
                 </div>
+               <hr>
+                <div class="parameters">
+                    <h4>Les paramètres</h4>
+                <ul>
+                    <li class="lileft"><font-awesome-icon icon="fa-solid fa-house-user" /><span class="desc-element">Admin</span></li>
+                    <li class="lileft"><font-awesome-icon icon="fa-solid fa-house-user" /><span class="desc-element">Home</span></li>
+                    <li class="lileft"><font-awesome-icon icon="fa-solid fa-house-user" /><span class="desc-element">Les services</span></li>
+                    <li class="lileft"><font-awesome-icon icon="fa-solid fa-house-user" /><span class="desc-element">Vos contacts</span></li>
+                    <li class="lileft"><font-awesome-icon icon="fa-solid fa-house-user" /><span class="desc-element">Vos depenses</span></li>
+                    <li class="lileft"><font-awesome-icon icon="fa-solid fa-house-user" /><span class="desc-element">Les points cumulés</span></li>
+                </ul>
+                <h4>Les paramètres</h4>
+                <ul>
+                    <li class="lileft"><font-awesome-icon icon="fa-solid fa-house-user" /><span class="desc-element">Admin</span></li>
+                    <li class="lileft"><font-awesome-icon icon="fa-solid fa-house-user" /><span class="desc-element">Home</span></li>
+                    <li class="lileft"><font-awesome-icon icon="fa-solid fa-house-user" /><span class="desc-element">Les services</span></li>
+                    <li class="lileft"><font-awesome-icon icon="fa-solid fa-house-user" /><span class="desc-element">Vos contacts</span></li>
+                    <li class="lileft"><font-awesome-icon icon="fa-solid fa-house-user" /><span class="desc-element">Vos depenses</span></li>
+                    <li class="lileft"><font-awesome-icon icon="fa-solid fa-house-user" /><span class="desc-element">Les points cumulés</span></li>
+                </ul>
+                <h4>Les paramètres</h4>
+                <ul>
+                    <li class="lileft"><font-awesome-icon icon="fa-solid fa-house-user" /><span class="desc-element">Admin</span></li>
+                    <li class="lileft"><font-awesome-icon icon="fa-solid fa-house-user" /><span class="desc-element">Home</span></li>
+                    <li class="lileft"><font-awesome-icon icon="fa-solid fa-house-user" /><span class="desc-element">Les services</span></li>
+                    <li class="lileft"><font-awesome-icon icon="fa-solid fa-house-user" /><span class="desc-element">Vos contacts</span></li>
+                    <li class="lileft"><font-awesome-icon icon="fa-solid fa-house-user" /><span class="desc-element">Vos depenses</span></li>
+                    <li class="lileft"><font-awesome-icon icon="fa-solid fa-house-user" /><span class="desc-element">Les points cumulés</span></li>
+                </ul>
+                </div>
+               
+             
             </aside>
             <div class="center-container">
                 <UserProfileNav />
@@ -93,23 +118,53 @@ export default {
 </template>
 
 <style scoped>
-main .main {
+.main {
+    margin-left: 0;
     height: 100vh;
     width: 100vw;
     box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
 }
 
-main .main .left {
+.main .left {
     position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
     width: 10vw;
     height: 100%;
-    background-color: rgb(24, 24, 24);
+    background-color: #1a161e;
+}
+.headerleft {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    padding: 5px;
 }
 
-main .main .right {
+.headerleft p{
+    margin-left: 15px;
+    color: aliceblue;
+}
+.main .left ul {
+    padding-left:15px;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+.parameters h4 {
+    margin-top: 10px;
+}
+
+.main .left ul li {
+    margin-bottom: 15px;
+    color: rgba(88,84,92,255);
+}
+
+
+.main .left ul li .desc-element {
+    margin-left: 5px;
+}
+.main .right {
     position: absolute;
     right: 0;
     top: 0;
@@ -121,10 +176,10 @@ main .main .right {
 }
 
 .center-container {
-background-color: rgb(12, 12, 12);
-width: 66%;
-position: absolute;
-left: 12%;
+    background-color: rgb(12, 12, 12);
+    width: 66%;
+    position: absolute;
+    left: 12%;
 }
 
 .right .barUp {
@@ -162,27 +217,7 @@ left: 12%;
     opacity: 0.5;
 }
 
-.left .dashboardHome {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-}
 
-.left .dashboardHome .home img {
-    width: 30px;
-    height: 30px;
-    margin-left: 50px;
-    cursor: pointer;
-}
-
-.left .dashboardHome .dashboard img {
-    margin-right: 20px;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-}
 
 .courses-cards-container {
 
