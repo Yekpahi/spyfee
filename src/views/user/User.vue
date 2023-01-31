@@ -8,6 +8,7 @@ import Userinfo from "@/components/user/Userinfo.vue"
 import StudentCourseCard from "@/components/user/StudentCourseCard.vue"
 import ProfCourseCard from "@/components/user/ProfCourseCard.vue"
 import UserProfileNav from "@/components/user/UserProfileNav.vue"
+import privateForum from "./privateForum.vue"
 
 
 export default {
@@ -26,7 +27,8 @@ export default {
         Userinfo,
         StudentCourseCard,
         ProfCourseCard,
-        UserProfileNav
+        UserProfileNav,
+        privateForum
     }
 }
 </script>
@@ -74,8 +76,9 @@ export default {
              
             </aside>
             <div class="center-container">
-                <UserProfileNav />
-                <Userinfo />
+                <UserProfileNav/>
+                <Userinfo/>
+                <privateForum/>
 
             </div>
             <aside class="right">

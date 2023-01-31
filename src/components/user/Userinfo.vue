@@ -50,7 +50,7 @@ export default {
 
 <style scoped>
 .usermain {
-    width:40vw;
+    width:35vw;
     position: relative;
     left: 0;
     margin-top: 10px;
