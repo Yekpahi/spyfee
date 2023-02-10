@@ -31,6 +31,7 @@ export default {
             <ul>
                 <li class="header-left"> <img :src="logo" alt="" class="logo"/></li>
                 <li class="header-left"><RouterLink to="/"><img :src="home" alt="" class="home"/></RouterLink></li>
+                <li class="header-right"><RouterLink to="forum"><font-awesome-icon icon="fa-sharp fa-solid fa-users" /> <span>Forum</span></RouterLink></li>
                 <li class="header-right"><fa icon="fa-solid fa-right-to-bracket" /></li>
                 <li class="header-right"><img :src="signup" alt="" class="signup"/></li>
                 <li class="header-right"><img :src="notification" alt="" class="notification"/></li>
@@ -43,7 +44,7 @@ export default {
     </header>
 </template>
 
-<style scoped>
+<style scoped>A
 
 header .header-container {
 position: relative;

@@ -3,6 +3,7 @@ import Home from "@/views/home/Home.vue"
 import About from "@/views/about/About.vue"
 import NotFound from "@/views/not/NotFound.vue"
 import User from "@/views/user/User.vue"
+import Forum from "@/views/forum/publicForum.vue"
 import SearchPage from "@/views/search/SearchPage.vue"
 
 const router = createRouter({
@@ -25,6 +26,14 @@ const router = createRouter({
                 header: 2
               }
         },
+        {
+          path:"/forum",
+          name:"forum",
+          component: Forum,
+          meta: {
+              header: 3
+            }
+      },
         {
           path:"/search",
           name:"search",
